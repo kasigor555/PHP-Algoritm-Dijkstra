@@ -27,8 +27,8 @@ class Stack extends Sequence
     return $item;
   }
 
-  public function isEmpty(): bool
+  protected function getFirst(): ?Node
   {
-    return $this->last == null;
+    return $this->last;
   }
 }

@@ -6,10 +6,16 @@ include 'class/Stack.php';
 include 'class/Queue.php';
 
 $stack = new Queue();
-$stack->put("John");
-$stack->put("Alex");
-$stack->put("Mike");
-$stack->put("Bob");
+$stack->put("John 1");
+$stack->put("Alex 2");
+$stack->put("Mike 3");
+$stack->put("Bob 4");
+
+foreach ($stack->getList() as $item) {
+  echo $item . "<br>\n";
+}
+
+echo "=================<br>\n";
 
 // echo "<pre>";
 // var_dump($stack->get());

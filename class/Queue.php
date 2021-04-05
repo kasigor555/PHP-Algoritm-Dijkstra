@@ -23,15 +23,15 @@ class Queue extends Sequence
 
   public function get(): ?string
   {
-    
+    if ($this->isEmpty()) return null;
     $item = $this->head->getItem();
     $this->head = $this->head->getNext();
     return $item;
   }
 
-  public function isEmpty(): bool
+  protected function getFirst(): ?Node
   {
-    return $this->head == null;
+    return $this->head;
   }
 
 }
